@@ -10,6 +10,7 @@ const Search = ({ results }) => {
     <div>
       <Head>
         <title>{router.query.q} - Google Search</title>
+        <link rel="icon" href="/google-icon.svg" />
       </Head>
       <Header q={router.query.q} />
       {/* Search Results */}
