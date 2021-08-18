@@ -12,7 +12,7 @@ const SearchResults = ({ res }) => {
         <div className="max-w-xl mb-8" key={item.link}>
           <div className="group">
             <a href={item.link} className="text-sm">
-              {item.formattedUrl}
+              {item.displayLink}
             </a>
             <a href={item.link} className="text-sm">
               <h2 className="truncate text-xl text-blue-800 font-medium group-hover:underline">

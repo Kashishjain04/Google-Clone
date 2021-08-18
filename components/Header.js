@@ -10,7 +10,7 @@ import {
 import Avatar from "./Avatar";
 import HeaderOptions from "./HeaderOptions";
 
-const Header = ({ q }) => {
+const Header = ({ q, setImages }) => {
   const router = useRouter(),
     [query, setQuery] = useState(q);
 
@@ -55,7 +55,7 @@ const Header = ({ q }) => {
         </div>
       </div>
       {/* HeaderOptions */}
-      <HeaderOptions />
+      <HeaderOptions setImages={setImages} />
     </header>
   );
 };

@@ -9,7 +9,7 @@ import {
   SearchIcon,
 } from "@heroicons/react/outline";
 
-const HeaderOptions = () => {
+const HeaderOptions = ({ setImages }) => {
   const [selected, setSelected] = useState("All");
   return (
     <div className="flex w-full text-gray-700 justify-evenly text-sm lg:text-base lg:justify-start lg:space-x-36 lg:pl-48 border-b-[1px]">
@@ -19,13 +19,19 @@ const HeaderOptions = () => {
           Icon={SearchIcon}
           title="All"
           selected={selected === "All"}
-          onClick={() => setSelected("All")}
+          onClick={() => {
+            setSelected("All");
+            setImages(false);
+          }}
         />
         <HeaderOption
           Icon={PhotographIcon}
           title="Images"
           selected={selected === "Images"}
-          onClick={() => setSelected("Images")}
+          onClick={() => {
+            setSelected("Images");
+            setImages(true);
+          }}
         />
         <HeaderOption
           Icon={PlayIcon}
